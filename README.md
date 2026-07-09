@@ -5,35 +5,43 @@ descuento y mapa de puntos de interés (Leaflet).
 
 ## Instalación en Framer
 
-**1. Añade un componente Embed** en la página, donde quieras el widget, con este HTML:
+Inserta un componente **Embed** (Insert → Embed → HTML) en el punto exacto de la página donde
+quieras el widget, y pega esto dentro:
 
 ```html
 <div id="strong-race-widget"></div>
-```
-
-**2. En Site Settings → Custom Code → End of `<body>` tag**, pega:
-
-```html
 <script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.0.0/strong-race-widget.js"></script>
 ```
 
-El script espera a que el `<div>` exista antes de montar, así que no importa que Framer inserte
-el DOM después de hidratar React. Si al cabo de 10 s no lo encuentra, avisa por consola.
+Eso es todo. El `<div>` y el `<script>` van juntos en el mismo Embed: es el patrón que recomienda
+la propia documentación de Framer, y garantiza que el nodo de montaje exista cuando el script
+arranca. Los scripts no se ejecutan en el editor de Framer, solo en Preview y en el sitio
+publicado.
+
+Como alternativa, el `<script>` puede ir en Site Settings → Custom Code → End of `<body>` y el
+`<div>` en un Embed. También funciona: el script espera con un `MutationObserver` a que el `<div>`
+aparezca, aunque Framer lo inserte después de hidratar React. Si tras 10 s no lo encuentra, avisa
+por consola.
 
 ## Estructura
 
 ```
-strong-race-widget.js     23 KB   IIFE: CSS, datos y lógica
-assets/fonts/            297 KB   Panton 400 y 700 (.otf)
-assets/hotels/           265 KB   3 imágenes
-assets/pois/             1,9 MB   28 imágenes
+strong-race-widget.js       23 KB   IIFE: CSS, datos y lógica  ← el que se carga
+assets/fonts/              297 KB   Panton 400 y 700 (.otf)
+assets/hotels/             265 KB   3 imágenes
+assets/pois/               1,9 MB   28 imágenes
+
+strong-race-widget (2).js  3,4 MB   fuente original monolítica, solo referencia
 ```
 
-Ningún fichero supera los 400 KB; el mayor es `fonts/panton-700.otf` (145 KB).
+El fichero que se sirve es `strong-race-widget.js`. `strong-race-widget (2).js` es la versión
+original de un solo fichero, con todos los assets en base64; se conserva como referencia pero no
+se carga en producción.
 
 Las fuentes y las imágenes se sirven como ficheros reales, no como base64 embebido. Eso reduce
 el JS de 3,4 MB a 23 KB, permite que el navegador las cachee entre visitas y hace que el
-`loading="lazy"` de las imágenes de hotel funcione de verdad.
+`loading="lazy"` de las imágenes de hotel funcione de verdad. El fichero más pesado del conjunto
+es `fonts/panton-700.otf`, con 145 KB.
 
 ## Servir los assets desde otro origen
 
