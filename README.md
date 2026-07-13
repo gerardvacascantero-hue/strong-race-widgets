@@ -10,7 +10,7 @@ quieras el widget, y pega esto dentro:
 
 ```html
 <div id="strong-race-widget"></div>
-<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.0/strong-race-widget-5.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.1/strong-race-widget-5.js"></script>
 ```
 
 Eso es todo. El `<div>` y el `<script>` van juntos en el mismo Embed: es el patrón que recomienda
@@ -59,10 +59,10 @@ jsDelivr cachea cada tag de forma inmutable. Si cambias assets o código, crea u
 actualiza tanto la constante `A` del `.js` como la URL del `<script>`:
 
 ```bash
-git tag v1.2.1 && git push origin v1.2.1
+git tag v1.2.2 && git push origin v1.2.2
 ```
 
-El tag vigente es **v1.2.0**.
+El tag vigente es **v1.2.1**.
 
 ## Dependencias
 

@@ -1,7 +1,7 @@
 (function() {
 
   // ── Assets (override con window.SR_ASSETS_BASE antes de cargar el script) ──
-  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.0/assets/';
+  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.1/assets/';
 
   // ── Inject fonts + CSS once ──────────────────────────────
   if (!document.getElementById('sr-styles')) {
@@ -144,7 +144,7 @@
       :`<div class="p2-card"><div class="inner"><div class="p2-title">Ferry</div><div class="p2-route">${c.n} → Palma</div><div class="p2-meta">Sin ferry directo desde <b>${c.n}</b>. Con coche: ferry desde Barcelona, Valencia o Dénia.</div></div><a class="p2-btn" href="https://www.balearia.com/" target="_blank" rel="noopener">Ver puertos de salida</a></div>`;
     const g=document.getElementById('sr-grid');
     g.innerHTML=`
-      <div class="p2-card"><div class="inner"><div class="p2-promo">- 10% Exclusivo</div><div class="p2-title">Air Europa</div><div class="p2-route">${c.n} (${K}) → Palma (PMI)</div><div class="p2-meta">Vuelo directo · fechas del evento ya puestas (6 → 9 nov)</div></div><a class="p2-btn" href="${AE_URL}" target="_blank" rel="noopener">Ver vuelos</a></div>
+      <div class="p2-card"><div class="inner"><div class="p2-promo">- 15% Exclusivo</div><div class="p2-title">Air Europa</div><div class="p2-route">${c.n} (${K}) → Palma (PMI)</div><div class="p2-meta">Vuelo directo · fechas del evento ya puestas (6 → 9 nov)</div></div><a class="p2-btn" href="${AE_URL}" target="_blank" rel="noopener">Ver vuelos</a></div>
       <div class="p2-card"><div class="inner"><div class="p2-title">Otras aerolíneas</div><div class="p2-route">${c.n} (${K}) → Palma (PMI)</div><div class="p2-meta">Fechas del evento ya puestas (6 → 9 nov)</div></div><a class="p2-btn" href="${sky(c.k)}" target="_blank" rel="noopener">Ver en Skyscanner</a></div>
       ${fc}`;
     g.classList.add('on');
