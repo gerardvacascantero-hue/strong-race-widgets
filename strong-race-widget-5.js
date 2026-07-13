@@ -1,7 +1,7 @@
 (function() {
 
   // ── Assets (override con window.SR_ASSETS_BASE antes de cargar el script) ──
-  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.1/assets/';
+  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.2/assets/';
 
   // ── Inject fonts + CSS once ──────────────────────────────
   if (!document.getElementById('sr-styles')) {
@@ -155,8 +155,8 @@
   {badge:'-15% Strong Race',name:'Meliá Palma Marina',zone:'Paseo Marítimo',stars:4,desc:'Tan cerca de la ciudad como tan cerca del mar.',now:'Desde 128€',img:A+'hotels/melia-palma-marina.jpg',url:'https://events.melia.com/es/events/palma-port/Strong-Race0'},
   {badge:'-15% Strong Race',name:'INNSiDE Palma Bosque',zone:'Palma',stars:4,desc:'Descubre la bonita y cosmopolita ciudad de Palma.',now:'Desde 116€',img:A+'hotels/innside-palma-bosque.jpg',url:'https://events.melia.com/es/events/palma-port/Strong-Race0'},
   {badge:'-15% Strong Race',name:'INNSiDE Palma Center',zone:'Centro',stars:4,desc:'Diseño urbano en el cielo de Palma.',now:'Desde 141€',img:A+'hotels/innside-palma-center.jpg',url:'https://events.melia.com/es/events/palma-port/Strong-Race0'},
-  {badge:'-15% Strong Race',name:'Hotel Amic Horizonte',zone:'Palma',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 100€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-horizonte.jpg',url:'https://www.amic-hotels.com/'},
-  {badge:'-15% Strong Race',name:'Hotel Amic Colón',zone:'Centro · Solo alojamiento',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 96€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-colon.jpg',url:'https://www.amic-hotels.com/'},
+  {badge:'-10% Strong Race',name:'Hotel Amic Horizonte',zone:'Palma',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 100€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-horizonte.jpg',url:'https://www.amic-hotels.com/'},
+  {badge:'-10% Strong Race',name:'Hotel Amic Colón',zone:'Centro · Solo alojamiento',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 96€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-colon.jpg',url:'https://www.amic-hotels.com/'},
 ];
   document.getElementById('sr-hotels').innerHTML=HOTELS.map(h=>`
     <div class="p3-card">
