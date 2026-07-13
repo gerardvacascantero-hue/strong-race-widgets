@@ -10,7 +10,7 @@ quieras el widget, y pega esto dentro:
 
 ```html
 <div id="strong-race-widget"></div>
-<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.1.0/strong-race-widget-4.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.0/strong-race-widget-5.js"></script>
 ```
 
 Eso es todo. El `<div>` y el `<script>` van juntos en el mismo Embed: es el patrón que recomienda
@@ -26,14 +26,14 @@ por consola.
 ## Estructura
 
 ```
-strong-race-widget-4.js     22 KB   IIFE: CSS, datos y lógica  ← el que se carga
+strong-race-widget-5.js     23 KB   IIFE: CSS, datos y lógica  ← el que se carga
 assets/fonts/              296 KB   Panton 400 y 700 (.otf)
 assets/hotels/             408 KB   5 imágenes
 assets/pois/               1,9 MB   28 imágenes
 ```
 
 Las fuentes y las imágenes se sirven como ficheros reales, no como base64 embebido. Eso reduce
-el JS de 3,5 MB a 22 KB, permite que el navegador las cachee entre visitas y hace que el
+el JS de 3,5 MB a 23 KB, permite que el navegador las cachee entre visitas y hace que el
 `loading="lazy"` de las imágenes de hotel funcione de verdad. Ningún fichero del repo llega a
 400 KB; el más pesado es `fonts/panton-700.otf`, con 145 KB.
 
@@ -47,7 +47,7 @@ Para apuntarlos a otro sitio, define la variable **antes** de cargar el script:
 
 ```html
 <script>window.SR_ASSETS_BASE = 'https://mi-cdn.com/strong-race/assets/';</script>
-<script defer src=".../strong-race-widget-4.js"></script>
+<script defer src=".../strong-race-widget-5.js"></script>
 ```
 
 Debe acabar en barra. El origen tiene que enviar `Access-Control-Allow-Origin` para que las
@@ -59,10 +59,10 @@ jsDelivr cachea cada tag de forma inmutable. Si cambias assets o código, crea u
 actualiza tanto la constante `A` del `.js` como la URL del `<script>`:
 
 ```bash
-git tag v1.1.1 && git push origin v1.1.1
+git tag v1.2.1 && git push origin v1.2.1
 ```
 
-El tag vigente es **v1.1.0**.
+El tag vigente es **v1.2.0**.
 
 ## Dependencias
 
