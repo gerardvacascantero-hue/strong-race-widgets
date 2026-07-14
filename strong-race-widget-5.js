@@ -1,7 +1,7 @@
 (function() {
 
   // ── Assets (override con window.SR_ASSETS_BASE antes de cargar el script) ──
-  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.2/assets/';
+  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.3/assets/';
 
   // ── Inject fonts + CSS once ──────────────────────────────
   if (!document.getElementById('sr-styles')) {
@@ -246,13 +246,14 @@
       it.onclick=()=>sel(i,true);its[i]=it;listEl.appendChild(it);
     });
 
-    function sel(i,fly){
+    function sel(i,fly,skipScroll){
       Object.values(its).forEach(x=>x.classList.remove('active'));its[i].classList.add('active');
       Object.entries(mks).forEach(([k,m])=>m.setIcon(pinIcon(+k===i)));
       if(fly)map.flyTo(POIS[i].ll,POIS[i].venue?13:14,{duration:.8});
-      mks[i].openPopup();its[i].scrollIntoView({behavior:'smooth',block:'nearest'});
+      mks[i].openPopup();
+      if(!skipScroll)its[i].scrollIntoView({behavior:'smooth',block:'nearest'});
     }
-    setTimeout(()=>sel(0,false),400);
+    setTimeout(()=>sel(0,false,true),400);
   });
 
 })();
