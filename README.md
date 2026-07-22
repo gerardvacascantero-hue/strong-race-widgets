@@ -10,7 +10,7 @@ quieras el widget, y pega esto dentro:
 
 ```html
 <div id="strong-race-widget"></div>
-<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.3/strong-race-widget-5.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.4/strong-race-widget-5.js"></script>
 ```
 
 Eso es todo. El `<div>` y el `<script>` van juntos en el mismo Embed: es el patrón que recomienda
@@ -28,7 +28,7 @@ por consola.
 ```
 strong-race-widget-5.js     23 KB   IIFE: CSS, datos y lógica  ← el que se carga
 assets/fonts/              296 KB   Panton 400 y 700 (.otf)
-assets/hotels/             408 KB   5 imágenes
+assets/hotels/             472 KB   6 imágenes
 assets/pois/               1,9 MB   28 imágenes
 ```
 
@@ -59,10 +59,10 @@ jsDelivr cachea cada tag de forma inmutable. Si cambias assets o código, crea u
 actualiza tanto la constante `A` del `.js` como la URL del `<script>`:
 
 ```bash
-git tag v1.2.4 && git push origin v1.2.4
+git tag v1.2.5 && git push origin v1.2.5
 ```
 
-El tag vigente es **v1.2.3**.
+El tag vigente es **v1.2.4**.
 
 ## Dependencias
 

@@ -1,7 +1,7 @@
 (function() {
 
   // ── Assets (override con window.SR_ASSETS_BASE antes de cargar el script) ──
-  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.3/assets/';
+  const A = window.SR_ASSETS_BASE || 'https://cdn.jsdelivr.net/gh/gerardvacascantero-hue/strong-race-widgets@v1.2.4/assets/';
 
   // ── Inject fonts + CSS once ──────────────────────────────
   if (!document.getElementById('sr-styles')) {
@@ -157,6 +157,7 @@
   {badge:'-15% Strong Race',name:'INNSiDE Palma Center',zone:'Centro',stars:4,desc:'Diseño urbano en el cielo de Palma.',now:'Desde 141€',img:A+'hotels/innside-palma-center.jpg',url:'https://events.melia.com/es/events/palma-port/Strong-Race0'},
   {badge:'-10% Strong Race',name:'Hotel Amic Horizonte',zone:'Palma',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 100€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-horizonte.jpg',url:'https://www.amic-hotels.com/'},
   {badge:'-10% Strong Race',name:'Hotel Amic Colón',zone:'Centro · Solo alojamiento',stars:3,desc:'Aplica el código STRONGRACE en amic-hotels.com al buscar habitación y obtén un 10% de descuento.',now:'Desde 96€',code:'Utiliza el código STRONGRACE',img:A+'hotels/hotel-amic-colon.jpg',url:'https://www.amic-hotels.com/'},
+  {badge:'-10% Strong Race',name:'Hotel Abelay',zone:'Palma',stars:2,desc:'Del 5 al 9 de noviembre, mínimo 2 noches. Aplica el código SRACE26 y obtén un 10% de descuento.',now:'Desde 70€',code:'Utiliza el código SRACE26',img:A+'hotels/hotel-abelay.jpg',url:'https://www.hotelabelay.es/es/home.html?promocode=SRACE26'},
 ];
   document.getElementById('sr-hotels').innerHTML=HOTELS.map(h=>`
     <div class="p3-card">
